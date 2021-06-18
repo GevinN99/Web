@@ -1,0 +1,83 @@
+<!-- Img 01 , Slider 01 -->
+<div class="bg-img">
+  <ul>
+
+    <!--Img 01-->
+    <li>
+      <img class="row-01" src="../../../assets/footer/img_1.JPG" alt="bg-image"/>
+    </li>
+
+    <!--Slider 01-->
+    <li >
+      <div class="slider-wrap row ">
+        <ngb-carousel *ngIf="images">
+
+          <!--Slider Img 01-->
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper col-md-12 d-flex justify-content-center">
+              <img [src]="images[0]" alt="First slide">
+            </div>
+          </ng-template>
+
+          <!--Slider Img 02-->
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper col-md-12 d-flex justify-content-center">
+              <img [src]="images[1]" alt="Second slide">
+            </div>
+          </ng-template>
+
+        </ngb-carousel>
+      </div>
+    </li>
+
+  </ul>
+</div>
+
+
+
+<!-- Dad's Day Header -->
+<div class="dads-day">
+  <ul>
+    <li class="dads-day-case-one">make </li>
+    <li class="dads-day-case-two">dad's </li>
+    <li class="dads-day-case-one">day</li>
+  </ul>
+</div>
+
+
+<!-- Dad's Day Images -->
+<div class="row ">
+
+  <div class="col-md-4 d-flex justify-content-center">
+    <img src="../../../assets/footer/dads-day-01.jpg" alt="Dad's_Day_Image_01">
+  </div>
+
+  <div class="col-md-4 d-flex justify-content-center">
+    <img src="../../../assets/footer/dads-day-02.jpg" alt="Dad's_Day_Image_01">
+  </div>
+
+  <div class="col-md-4 d-flex justify-content-center">
+    <img src="../../../assets/footer/dads-day-03.jpg" alt="Dad's_Day_Image_01">
+  </div>
+
+</div>
+
+
+
+<!--    -->
+<ngx-slick-carousel class="carousel"
+                    #slickModal="slick-carousel"
+                    [config]="slideConfig"
+                    (init)="slickInit($event)"
+                    (breakpoint)="breakpoint($event)"
+                    (afterChange)="afterChange($event)"
+                    (beforeChange)="beforeChange($event)">
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <img src="{{ slide.img }}" alt="" width="100%">
+  </div>
+</ngx-slick-carousel>
+
+<button (click)="addSlide()">Add</button>
+<button (click)="removeSlide()">Remove</button>
+<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+<button (click)="slickModal.unslick()">unslick</button>

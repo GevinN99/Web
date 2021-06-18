@@ -1,0 +1,155 @@
+//--------------Row-01 - Buy More..-----------------
+.header-row-one{
+  background-color: black;
+  p{
+    color: white;
+    padding: .5% 0;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    a:focus{
+      color: #D90EAC;
+    }
+  }
+}
+//---------------------------------------------------
+
+
+
+
+//---Row-02 STORES & EVENTS, SHOPPING SERVISES, LKR---
+.header-row-two-row-one{  border-bottom: 1px solid #ccc;}
+.header-row-two{
+  margin-right: 1%;
+  padding: 4px;
+  text-decoration: none;
+  color: black;
+}
+.header-row-two:focus{
+  color: #D90EAC;
+}
+//------------------------------------------------------
+
+
+
+
+//-----------Row-03 Web-Header , Search-bar-------------
+.web-header{
+  padding-left: 3%;
+  font-family: "Berlin Sans FB";
+  font-size: 400%;
+  text-decoration: none;
+  color: black;
+}
+
+.search-items{
+  padding: 1.5%;
+}
+
+.search-bar-wrap{
+  display: inline;
+  height: 50%;
+  width: 280px;
+  float: right;
+}
+
+.search-bar{
+  width: 40%;
+  border-radius: 20px;
+  height: 35px;
+}
+
+.search-bar:focus{
+  outline: none;
+  width: 60%;
+}
+
+.search-button{
+  height: 25px;
+  width: 5%;
+  background-color: white;
+  border: none;
+  padding: 1%;
+}
+
+.search-button:focus{
+  outline: none;
+}
+//------------------------------------------------------
+
+
+
+
+//------------------------Nav-Bar-----------------------
+.dropbtn {
+   background-color: white;
+   color: black;
+   font-size: 16px;
+   border: none;
+   letter-spacing: 1.5px;
+   text-transform: uppercase;
+
+ }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: white;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.col-md-1{
+  padding: 0;
+  margin: 5px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {display: block; color: #D90EAC}
+
+.dropdown:hover .dropbtn {background-color: white;}
+//------------------------------------------------------
+
+
+
+
+//-----Header Row-04 Free international shipping...-----
+.header-row-four{
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  p{
+    color: #27AE7A;
+    padding: 18px 0;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-size: 18px;
+    a{
+      text-decoration: none;
+      color: #27AE7A;
+    }
+    a:hover{
+      color: #D90EAC
+    }
+  }
+}
+//------------------------------------------------------

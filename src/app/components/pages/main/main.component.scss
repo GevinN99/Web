@@ -1,0 +1,58 @@
+.bg-img{
+  ul{
+    list-style: none;
+    margin-block-start: 2em;
+    padding: 10px 40px;
+    img{
+      width: 100%;
+    }
+  }
+  .row{
+    padding: 3% 0;
+    margin-left: 0;
+  }
+}
+
+.slider-wrap{
+  padding: 10px 40px;
+  width: 100%;
+}
+
+
+.dads-day{
+  padding: 70px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+
+  li{
+    display: inline;
+    align-items: center;
+
+  }
+  .dads-day-case-one{
+    font-family: "MV Boli";
+    font-size: 40px;
+  }
+  .dads-day-case-two{
+    font-family: "Britannic Bold";
+    font-size: 50px;
+  }
+}
+
+
+//-------------------------------------------
+//-------------------------------------------
+.slick-slider {
+  width: 88%;
+  margin: auto;
+  background: rgb(14, 13, 13);
+}
+
+.slick-prev,
+.slick-next {
+  height: 45px;
+  width: 40px;
+  background: grey !important;
+  z-index: 100;
+}
