@@ -1,0 +1,56 @@
+hr.style-one {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+//--------------------------------------------
+.footer-p-one{
+  padding: 0 10%;
+  ul{
+    list-style: none;
+    margin-block-start: 2em;
+    padding: 10px 40px;
+  }
+  h6{
+    margin-bottom: 7%;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    color: #E00EAC;
+    text-decoration: underline;
+  }
+  li{
+    letter-spacing: .2px;
+    margin-top: 3%;
+    font-size: 95%;
+  }
+  p{
+    font-size: 80%;
+    padding: 2% 0;
+  }
+  .sign-up-text{
+    padding: 15% 0;
+  }
+}
+//---------------
+.footer-p-two{
+  p{
+    text-align: center;
+    font-size: 80%;
+    letter-spacing: .5px;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    color: #E00EAC;
+    text-decoration: underline;
+  }
+}
+
+//----------

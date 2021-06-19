@@ -12,27 +12,27 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  images = [1, 2].map((n) =>  `../../../assets/footer/s${n}.jpg`);
+  images = [1, 2].map((n) =>  `../../../assets/main/s${n}.jpg`);
 
 //--------------------------------
 //--------------------------------
+  pages = [
+    {link: "#1"},
+    {link: "#2"},
+    {link: "#3"},
+    {link: "#4"},
+    {link: "#5"}
+  ];
+
 
   slides = [
-    {img: "https://via.placeholder.com/600.png/09f/fff"},
-    {img: "https://via.placeholder.com/600.png/021/fff"},
-    {img: "https://via.placeholder.com/600.png/321/fff"},
-    {img: "https://via.placeholder.com/600.png/422/fff"},
-    {img: "https://via.placeholder.com/600.png/654/fff"}
+    {img: "../../../assets/main/Slider02-01.jpg", link: "#1", name: 'theory', price: '$11'},
+    {img: "../../../assets/main/Slider02-02.jpg", link: "#2", name: 'helmut lang', price: '$22'},
+    {img: "../../../assets/main/Slider02-03.jpg", link: "#3", name: 'nunushka', price: '$33'},
+    {img: "../../../assets/main/Slider02-04.jpg", link: "#4", name: 'vince', price: '$44'},
+    {img: "../../../assets/main/Slider02-05.jpg", link: "#5", name: 'lacoste', price: '$55'}
   ];
   slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
-
-  addSlide() {
-    this.slides.push({img: "http://placehold.it/350x150/777777"})
-  }
-
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
-  }
 
   slickInit(e: any) {
     console.log('slick initialized');

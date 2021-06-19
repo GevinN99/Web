@@ -4,7 +4,7 @@
 
     <!--Img 01-->
     <li>
-      <img class="row-01" src="../../../assets/footer/img_1.JPG" alt="bg-image"/>
+      <img class="row-01" src="../../../assets/main/img_1.JPG" alt="bg-image"/>
     </li>
 
     <!--Slider 01-->
@@ -49,22 +49,28 @@
 <div class="row ">
 
   <div class="col-md-4 d-flex justify-content-center">
-    <img src="../../../assets/footer/dads-day-01.jpg" alt="Dad's_Day_Image_01">
+    <img src="../../../assets/main/dads-day-01.jpg" alt="Dad's_Day_Image_01">
   </div>
 
   <div class="col-md-4 d-flex justify-content-center">
-    <img src="../../../assets/footer/dads-day-02.jpg" alt="Dad's_Day_Image_01">
+    <img src="../../../assets/main/dads-day-02.jpg" alt="Dad's_Day_Image_01">
   </div>
 
   <div class="col-md-4 d-flex justify-content-center">
-    <img src="../../../assets/footer/dads-day-03.jpg" alt="Dad's_Day_Image_01">
+    <img src="../../../assets/main/dads-day-03.jpg" alt="Dad's_Day_Image_01">
   </div>
 
 </div>
 
 
+<!--BEST GIFTS-->
+<div class="separator"><b>OUR BEST GIFTS</b></div>
+<div class="shop-all"><a href="#">SHOP ALL</a></div>
 
-<!--    -->
+
+
+<!--  Slider 02  -->
+<div>
 <ngx-slick-carousel class="carousel"
                     #slickModal="slick-carousel"
                     [config]="slideConfig"
@@ -73,11 +79,10 @@
                     (afterChange)="afterChange($event)"
                     (beforeChange)="beforeChange($event)">
   <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-    <img src="{{ slide.img }}" alt="" width="100%">
+    <a href="{{slide.link}}">
+      <img src="{{ slide.img }}" class="img-slider" alt="" width="100%" ngFor="let slide of slides" >
+      <p><b>{{slide.name}}</b><br>{{slide.price}}</p>
+    </a>
   </div>
 </ngx-slick-carousel>
-
-<button (click)="addSlide()">Add</button>
-<button (click)="removeSlide()">Remove</button>
-<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-<button (click)="slickModal.unslick()">unslick</button>
+</div>

@@ -4,6 +4,7 @@
   p{
     color: white;
     padding: .5% 0;
+    text-align: center;
     a{
       text-decoration: none;
       color: white;
@@ -26,7 +27,7 @@
   text-decoration: none;
   color: black;
 }
-.header-row-two:focus{
+.header-row-two:hover{
   color: #D90EAC;
 }
 //------------------------------------------------------
@@ -35,10 +36,11 @@
 
 
 //-----------Row-03 Web-Header , Search-bar-------------
+
 .web-header{
   padding-left: 3%;
   font-family: "Berlin Sans FB";
-  font-size: 400%;
+  //font-size: 70px;
   text-decoration: none;
   color: black;
 }
@@ -58,9 +60,11 @@
   width: 40%;
   border-radius: 20px;
   height: 35px;
+  transition: width .5s;
+  padding-left: 20px;
 }
 
-.search-bar:focus{
+.search-bar:hover{
   outline: none;
   width: 60%;
 }
@@ -75,6 +79,9 @@
 
 .search-button:focus{
   outline: none;
+}
+.dropbtn:hover{
+  color: #D90EAC;
 }
 //------------------------------------------------------
 
