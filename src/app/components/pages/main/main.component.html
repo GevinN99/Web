@@ -79,7 +79,7 @@
                     (afterChange)="afterChange($event)"
                     (beforeChange)="beforeChange($event)">
   <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-    <a href="{{slide.link}}">
+    <a routerLink="{{slide.link}}">
       <img src="{{ slide.img }}" class="img-slider" alt="" width="100%" ngFor="let slide of slides" >
       <p><b>{{slide.name}}</b><br>{{slide.price}}</p>
     </a>

@@ -16,17 +16,9 @@ export class MainComponent implements OnInit {
 
 //--------------------------------
 //--------------------------------
-  pages = [
-    {link: "#1"},
-    {link: "#2"},
-    {link: "#3"},
-    {link: "#4"},
-    {link: "#5"}
-  ];
-
 
   slides = [
-    {img: "../../../assets/main/Slider02-01.jpg", link: "#1", name: 'theory', price: '$11'},
+    {img: "../../../assets/main/Slider02-01.jpg", link: "/order", name: 'theory', price: '$11'},
     {img: "../../../assets/main/Slider02-02.jpg", link: "#2", name: 'helmut lang', price: '$22'},
     {img: "../../../assets/main/Slider02-03.jpg", link: "#3", name: 'nunushka', price: '$33'},
     {img: "../../../assets/main/Slider02-04.jpg", link: "#4", name: 'vince', price: '$44'},

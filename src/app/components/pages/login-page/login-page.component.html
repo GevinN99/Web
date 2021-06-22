@@ -1,0 +1,41 @@
+<div class="login-page">
+
+
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-center">
+      <h3>Sign in with your BLOOMINGDALE'S Account</h3>
+    </div>
+  </div>
+
+<!-- Login Email, Password, Login Btn -->
+  <div class="row">
+   <div class="col-md-12 d-flex justify-content-center">
+     <form [formGroup]="loginForm" (ngSubmit)="getCustomer(email, password)">//------
+      <ul>
+        <li>
+           <input formControlName="customerEmail"  [(ngModel)]="email" [value]="email" type="email" class="form-control" id="customerEmail"  placeholder="Enter Email">
+        </li>
+        <li>
+           <input formControlName="customerPassword" [(ngModel)]="password" type="password" class="form-control" id="customerPassword" placeholder="Enter Password">
+         </li>
+         <li>
+           <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary  btn-lg btn-block">
+            Sign in
+          </button>
+         </li>
+      </ul>
+     </form>
+   </div>
+  </div>
+
+<!-- Create an account -->
+  <div class="row create-account">
+    <div class="col-md-12 d-flex justify-content-center">
+      <a href="#">Create an Account</a>
+    </div>
+  </div>
+
+
+
+
+</div>
