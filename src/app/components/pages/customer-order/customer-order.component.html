@@ -64,19 +64,21 @@
     <div class="discount-btn">
       <button type="button" class="btn btn-warning">TAKE UP TO 30% OFF WITH CODE: SAVEMORE <u>DETAILS</u></button>
     </div>
+<!--    -->
 
+    <form [formGroup]="orderForm" (ngSubmit)="saveOrder()">
     <div class="order-colour">
-      <p><b>COLOR</b> :</p>
-
+<!--      <p><b>COLOR</b> :</p>-->
+      <label class="from-label">COLOR :</label>
       <!--  Radio Btn    -->
       <div class="row radio-btn">
         <div class="col-md-2">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">White</label>
+          <input formControlName="orderColour" class="form-check-input" type="radio" id="orderColour" value="White">
+          <label class="form-check-label" for="orderColour">White</label>
         </div>
         <div class="col-md-10">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-          <label class="form-check-label" for="flexRadioDefault2">Baltic</label>
+          <input formControlName="orderColour" class="form-check-input" type="radio" value="Baltic">
+          <label class="form-check-label" for="orderColour">Baltic</label>
         </div>
       </div>
     </div>
@@ -84,15 +86,15 @@
     <div class="order-size">
       <div class="row">
         <div class="col-md-8">
-          <label for="size"><b>SIZE </b>:</label>
+          <label><b>SIZE </b>:</label>
           <select class="form-control" id="size">
             <option value="Select a size" data-index="">Select a size</option>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L" data-name="L">L</option>
-            <option value="XL" data-name="XL">XL</option>
-            <option value="XXL" data-name="XXL">XXL</option>
+            <option for="orderSize" value="XS">XS</option>
+            <option for="orderSize" value="S">S</option>
+            <option for="orderSize" value="M">M</option>
+            <option for="orderSize" value="L" data-name="L">L</option>
+            <option for="orderSize" value="XL" data-name="XL">XL</option>
+            <option for="orderSize" value="XXL" data-name="XXL">XXL</option>
           </select>
         </div>
       </div>
@@ -105,9 +107,44 @@
 <!--  Btn  -->
     <div class="row add-to-cart-btn">
       <div class="col-md-8">
-        <button type="button" class="btn btn-secondary btn-lg btn-block">ADD TO BAG</button>
+        <button routerLink="/cart" type="submit" class="btn btn-secondary btn-lg btn-block">ADD TO BAG</button>
       </div>
     </div>
+
+    </form>
+
+
+
+<!--    <form [formGroup]="orderForm" (ngSubmit)="saveOrder()">-->
+
+<!--      <div><b>Theory</b></div>-->
+<!--      <div>Color Tipped Pique Polo Shirt</div>-->
+<!--      <div class="item-price">LKR 31,006.37</div>-->
+
+<!--      <button type="button" class="btn btn-warning">TAKE UP TO 30% OFF WITH CODE: SAVEMORE <u>DETAILS</u></button>-->
+
+<!--      <p>COLOR :</p>-->
+<!--      <input formControlName="orderColour" class="form-check-input" type="radio" id="orderColour1" value="White">-->
+<!--      <label class="form-check-label">White</label>-->
+<!--      <br>-->
+<!--      <input formControlName="orderColour" class="form-check-input" type="radio" id="orderColour2" value="Baltic">-->
+<!--      <label class="form-check-label" >Baltic</label>-->
+<!--      <br>-->
+
+<!--      <label for="orderSize">SIZE :</label>-->
+<!--      <select class="form-control" id="size" for="orderSize">-->
+<!--        <option value="Select a size" data-index="">Select a size</option>-->
+<!--        <option formControlName="orderSize" value="XS">XS</option>-->
+<!--        <option formControlName="orderSize" value="S">S</option>-->
+<!--        <option formControlName="orderSize" value="M">M</option>-->
+<!--        <option formControlName="orderSize" value="L" data-name="L">L</option>-->
+<!--        <option formControlName="orderSize" value="XL" data-name="XL">XL</option>-->
+<!--        <option formControlName="orderSize" value="XXL" data-name="XXL">XXL</option>-->
+<!--      </select>-->
+<!--      <br>-->
+
+<!--      <button routerLink="/cart" type="submit" class="btn btn-secondary btn-lg btn-block">ADD TO BAG</button>-->
+<!--    </form>-->
 
 
 
@@ -141,6 +178,7 @@
       </ul>
       <hr>
     </div>
+
 
     <div class="row product-detail-img">
       <div class="col-md-1">

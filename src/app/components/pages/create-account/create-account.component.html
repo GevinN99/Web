@@ -1,48 +1,49 @@
 <div class="create-acc-page">
 
 <!--Heading-->
-  <div class="row">
+  <div class="">
 
-    <div class="col-md-12 d-flex justify-content-center">
+    <div class="d-flex justify-content-center">
       <b><h3>Create your BLOOMINGDALE'S Account</h3></b>
     </div>
-
-      <div class="acc-form">
+    <br>
+      <div class="acc-form page-content">
         <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
           <div class="col-6 col-sm-8 col-md-4 col-lg-3">
-          <label for="customerName" class="from-label">User Name :</label>
-          <input formControlName="customerName" type="text" class="form-control" id="customerName">
+            <label for="customerName" class="from-label"><b>User Name :</b></label>
+            <input formControlName="customerName" type="text" class="form-control" id="customerName">
             <p class="alert alert-danger" *ngIf="
               customerForm.get('customerName')?.touched &&
-              customerForm.get('customerName')?.invalid"  style="margin-top: 3px">User Name Is Required</p>
-        </div>
+              customerForm.get('customerName')?.invalid"  style="margin-top: 3px">User Name Is Required
+            </p>
+          </div>
           <br>
           <div class="col-12 col-sm-8 col-md-4 col-lg-3">
-          <label for="customerEmail" class="from-label">Email Address :</label>
-          <input formControlName="customerEmail" type="email" class="form-control" id="customerEmail">
-            <p class="alert alert-danger" *ngIf="
-              customerForm.get('customerEmail')?.touched &&
-              customerForm.get('customerEmail')?.invalid"  style="margin-top: 3px">User Email Is Required</p>
-        </div>
+            <label for="customerEmail" class="from-label"><b>Email Address :</b></label>
+            <input formControlName="customerEmail" type="email" class="form-control" id="customerEmail">
+              <p class="alert alert-danger" *ngIf="
+                customerForm.get('customerEmail')?.touched &&
+                customerForm.get('customerEmail')?.invalid"  style="margin-top: 3px">User Email Is Required</p>
+          </div>
           <br>
           <div class="col-12 col-sm-8 col-md-4 col-lg-3">
-          <label for="customerMobileNumber" class="from-label">Mobile Number :</label>
-          <input formControlName="customerMobileNumber" type="tel" class="form-control" id="customerMobileNumber">
-            <p class="alert alert-danger" *ngIf="
+            <label for="customerMobileNumber" class="from-label"><b>Mobile Number :</b></label>
+            <input formControlName="customerMobileNumber" type="tel" class="form-control" id="customerMobileNumber">
+              <p class="alert alert-danger" *ngIf="
               customerForm.get('customerMobileNumber')?.touched &&
               customerForm.get('customerMobileNumber')?.invalid" style="margin-top: 3px">User Mobile Number Is Required</p>
-        </div>
+          </div>
           <br>
           <div class="col-12 col-sm-8 col-md-4 col-lg-3">
-          <label for="customerAddress" class="from-label">Shipping Address :</label>
-          <textarea formControlName="customerAddress" class="form-control" id="customerAddress" rows="3"></textarea>
+            <label for="customerAddress" class="from-label"><b>Shipping Address :</b></label>
+            <textarea formControlName="customerAddress" class="form-control" id="customerAddress" rows="3"></textarea>
             <p class="alert alert-danger" *ngIf="
               customerForm.get('customerAddress')?.touched &&
               customerForm.get('customerAddress')?.invalid"  style="margin-top: 3px">User Address Is Required</p>
-        </div>
+           </div>
           <br>
           <div class="col-12 col-sm-8 col-md-4 col-lg-3">
-          <label for="customerPassword" class="from-label">Password :</label>
+          <label for="customerPassword" class="from-label"><b>Password :</b></label>
           <input formControlName="customerPassword" type="password" class="form-control" id="customerPassword">
             <p class="alert alert-danger" *ngIf="
               customerForm.get('customerPassword')?.touched &&

@@ -10,7 +10,7 @@
 <!-- Login Email, Password, Login Btn -->
   <div class="row">
    <div class="col-md-12 d-flex justify-content-center">
-     <form [formGroup]="loginForm" (ngSubmit)="getCustomer(email, password)">//------
+     <form [formGroup]="loginForm" (ngSubmit)="getCustomer(email, password)">
       <ul>
         <li>
            <input formControlName="customerEmail"  [(ngModel)]="email" [value]="email" type="email" class="form-control" id="customerEmail"  placeholder="Enter Email">
@@ -31,7 +31,7 @@
 <!-- Create an account -->
   <div class="row create-account">
     <div class="col-md-12 d-flex justify-content-center">
-      <a href="#">Create an Account</a>
+      <a routerLink="/customer">Create an Account</a>
     </div>
   </div>
 

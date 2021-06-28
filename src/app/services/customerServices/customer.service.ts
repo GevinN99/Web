@@ -22,7 +22,6 @@ export class CustomerService {
       customerPassword:c.customerPassword,
     })
   }
-
 //  --------------
   public getCustomer(email: string, password : string): Observable<any> {
     return this.http.get(this.baseUrl + 'customerRoute/getAllCustomers', {headers: {email : email, password : password}});

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import OrderDTO from "../../../dtos/OrderDTO";
 
 @Component({
   selector: 'app-customer-order',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerOrderComponent implements OnInit {
 
+  orderForm:FormGroup= new FormGroup({
+    orderColour: new FormControl(null,[
+      Validators.required
+    ]),
+    orderSize: new FormControl(null,[
+      Validators.required
+    ])
+  });
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  saveOrder(){
+    const order= new OrderDTO(
+      this.orderForm.get('orderColour')?.value,
+      this.orderForm.get('orderSize')?.value
+   );
+    console.log(order);
   }
 
 //  -------------------------------
